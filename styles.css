@@ -69,7 +69,9 @@ svg {
     margin-right: .5em;
 }
 
-.mainIconContainer {
+#mainIconContainer {
     position: absolute;
     top: 0;
+    height: 200vmin;
+    pointer-events: none;
 }
