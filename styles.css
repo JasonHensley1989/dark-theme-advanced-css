@@ -4,7 +4,7 @@
 
 body {
     --accent-color: orangered;
-    --background-color: white;
+    --background-color: lightblue;
     --text-color: black;
     --button-text-color: white;
     --transition-delay: 1s;
@@ -75,18 +75,25 @@ svg {
     height: 200vmin;
     pointer-events: none;
     transform: rotate(var(--rotation));
+    transition: transform var(--transition-delay);
 }
 
-.mainIcons {
+.dark #mainIconContainer {
+    --rotation: 180deg;
+}
+/* .mainIcons {
     height: 100px;
     width: 100px;
 
-}
+} */
 
 #sun,
 #moon {
     position: absolute;
-
+    transition: opacity, fill, var(--transition-delay);
+    width: 40px;
+    height: 40px;
+    fill: var(--accent-color);
 }
 
 #sun {
@@ -95,5 +102,13 @@ svg {
 
 #moon {
     bottom: 5%;
+    opacity: 0;
+}
+
+.dark #moon {
+    opacity: 1;
+}
+
+.dark #sun {
     opacity: 0;
 }
